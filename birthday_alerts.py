@@ -86,3 +86,4 @@ def test_bot():
 if __name__ == "__main__":
     logger.info("Starting birthday alert script")
     check_upcoming()
+    test_bot()
