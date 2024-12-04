@@ -16,8 +16,7 @@ jobs:
           python-version: '3.x'
       - name: Install dependencies
         run: |
-          pip install python-telegram-bot
-          pip install python-logging
+          pip install python-telegram-bot==13.7  # Specify version to avoid conflicts
       - name: Run alerts
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
