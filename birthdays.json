@@ -1,0 +1,14 @@
+{
+    "birthdays": [
+        {
+            "name": "Friend1",
+            "date": "12-25",
+            "nickname": "buddy"
+        },
+        {
+            "name": "Friend2",
+            "date": "01-15",
+            "nickname": "bestie"
+        }
+    ]
+}
