@@ -1,14 +1,29 @@
 {
     "birthdays": [
         {
-            "name": "Friend1",
-            "date": "12-25",
-            "nickname": "buddy"
+            "name": "Dr. Harendrasinh",
+            "date": "12-10",
+            "nickname": "Pappa"
         },
         {
-            "name": "Friend2",
-            "date": "01-15",
-            "nickname": "bestie"
+            "name": "Dr. Hemagniben",
+            "date": "10-26",
+            "nickname": "Mummy"
+        },
+        {
+            "name": "Dr. Khushbu",
+            "date": "06-06",
+            "nickname": "Sister"
+        },
+         {
+            "name": "Dr. Rutvik",
+            "date": "12-05",
+            "nickname": "Me"
+        },
+         {
+            "name": "Ajay Masa, Geeta Masi",
+            "date": "12-15",
+            "nickname": "relatives"
         }
     ]
 }
