@@ -4,6 +4,7 @@ from datetime import timedelta
 import json
 import os
 import logging
+from urllib.request import urlopen
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)
@@ -20,16 +21,16 @@ except Exception as e:
     raise
 
 def load_birthdays():
-    """Load birthdays from JSON file"""
     try:
-        with open('birthdays.json', 'r') as file:
-            return json.load(file)['birthdays']
-    except FileNotFoundError:
-        logger.warning("birthdays.json not found, using default data")
+        with urlopen('https://raw.githubusercontent.com/RutvikRana/Birthday_bot/refs/heads/main/birthdays.json') as response:
+            return json.loads(response.read())['birthdays']
+    except Exception as e:
+        logger.warning(f"Failed to fetch birthdays: {e}")
         return [
             {"name": "Friend1", "date": "12-25", "nickname": "buddy"},
             {"name": "Friend2", "date": "01-15", "nickname": "bestie"}
         ]
+
 
 def send_message(person, message_type):
     """Send formatted message based on time"""
@@ -86,3 +87,4 @@ def test_bot():
 if __name__ == "__main__":
     logger.info("Starting birthday alert script")
     check_upcoming()    
+v
